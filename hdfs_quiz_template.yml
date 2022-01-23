@@ -5,23 +5,23 @@ intermediate.hdfs_list_recursively:
 intermediate.hdfs_list_recursively_human_readable:
     stdin: "hdfs dfs -ls -R -h /data/wiki"
 intermediate.hdfs_file_replication_factor:
-    stdin: "provide your answer here"
+    stdin: "3"
 intermediate.hdfs_folder_replication_factor:
-    stdin: "provide your answer here"
+    stdin: "0"
 intermediate.hdfs_describe_size:
     stdin: "actual"
 intermediate.hdfs_cumulative_size:
-    stdin: "provide your answer here"
+    stdin: "hdfs dfs -du -s -h /data/wiki"
 intermediate.hdfs_create_folder:
-    stdin: "provide your answer here"
+    stdin: "hdfs dfs -mkdir /user/bdx52022q1_Ametkulova/zaure_dir"
 intermediate.hdfs_create_nested_folder:
-    stdin: "provide your answer here"
+    stdin: "hdfs dfs -mkdir -p /user/bdx52022q1_Ametkulova/zaure_dir/dir1/dir2"
 intermediate.hdfs_remove_nested_folders:
-    stdin: "provide your answer here"
+    stdin: "hdfs dfs -rm -r  /user/bdx52022q1_Ametkulova/zaure_dir"
 intermediate.hdfs_trash_behavior:
-    stdin: "provide your answer here"
+    stdin: "hdfs dfs -rm -r -skipTrash  /user/bdx52022q1_Ametkulova/zaure_dir"
 intermediate.hdfs_create_empty_file:
-    stdin: "provide your answer here"
+    stdin: " hdfs dfs -touchz  /user/bdx52022q1_Ametkulova/file1"
 intermediate.hdfs_create_small_file:
     stdin: |-
         provide your
