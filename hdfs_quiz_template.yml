@@ -39,19 +39,20 @@ intermediate.hdfs_move_file:
 intermediate.hdfs_download_and_concatenate:
     stdin: "hdfs dfs -getmerge  /user/bdx52022q1_Ametkulova/file_local1 /user/bdx52022q1_Ametkulova/file_local2 /tmp/file_new"
 advanced.hdfs_set_file_replication:
-    stdin: |-
-        provide your
-        multiline answer
-        here
+    stdin: "hdfs dfs -setrep 2 /user/bdx52022q1_Ametkulova/file_local"
 advanced.hdfs_get_files_and_block:
-    stdin: "provide your answer here"
+    stdin: "hdfs fsck /user/bdx52022q1_Ametkulova/ -files -blocks -locations"
 advanced.hdfs_get_block_information:
-    stdin: "provide your answer here"
+    stdin: "hdfs fsck -blockId blk_1106458153"
 advanced.hdfs_dfs_architecture:
     stdin: |-
-        provide your
-        multiline answer
-        here
+        hdfs fsck /user/bdx52022q1_Ametkulova/file_local2 -files -blocks -locations
+        sudo -i -u hdfsuser
+        ssh hdfsuser@88.198.61.247
+        hdfs fsck -blockId blk_1106458153
+        hdfs dfs -cat /user/bdx52022q1_Ametkulova/file_local1
+        hdfs dfs -ls /data/namenode_example/
+        hdfs dfs -cat /data/namenode_example/current/fsimage_0000000000030779867 
 advanced.webhdfs_read_100B:
     stdin: |-
         provide your
